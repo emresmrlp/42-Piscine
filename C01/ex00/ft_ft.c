@@ -6,11 +6,11 @@
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 21:19:41 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/10 09:04:42 by ysumeral         ###   ########.fr       */
+/*   Updated: 2024/07/18 07:36:28 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ft(int *nbr)
 {
-	*nbr = 32;
+	*nbr = 42;
 }

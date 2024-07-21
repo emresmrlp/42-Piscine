@@ -6,11 +6,9 @@
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 23:42:45 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/07 23:42:55 by ysumeral         ###   ########.fr       */
+/*   Updated: 2024/07/18 08:29:00 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void	ft_sort_int_tab(int *tab, int size)
 {

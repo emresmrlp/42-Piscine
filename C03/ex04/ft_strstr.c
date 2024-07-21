@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/07 23:24:46 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/18 07:36:31 by ysumeral         ###   ########.fr       */
+/*   Created: 2024/07/20 14:02:19 by ysumeral          #+#    #+#             */
+/*   Updated: 2024/07/20 20:32:24 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strstr(char *str, char *to_find)
 {
-	if (b != 0)
+	int	first_i;
+	int	second_i;
+
+	first_i = 0;
+	if (to_find[first_i] == '\0')
+		return (str);
+	while (str[first_i] != '\0')
 	{
-		*div = a / b;
-		*mod = a % b;
+		second_i = 0;
+		while (to_find[second_i] == str[first_i + second_i])
+		{
+			if (to_find[second_i + 1] == '\0')
+				return (str + first_i);
+			second_i++;
+		}
+		first_i++;
 	}
+	return (0);
 }

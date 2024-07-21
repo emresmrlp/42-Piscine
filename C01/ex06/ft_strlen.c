@@ -6,7 +6,7 @@
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/07 23:39:13 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/07 23:39:24 by ysumeral         ###   ########.fr       */
+/*   Updated: 2024/07/18 07:36:36 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int	ft_strlen(char *str)
 
 	i = 0;
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }

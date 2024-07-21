@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/07 23:24:46 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/18 07:36:31 by ysumeral         ###   ########.fr       */
+/*   Created: 2024/07/20 13:48:04 by ysumeral          #+#    #+#             */
+/*   Updated: 2024/07/21 14:18:14 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	if (b != 0)
+	unsigned int	i;
+	unsigned int	dest_len;
+
+	i = 0;
+	dest_len = 0;
+	while (dest[dest_len] != '\0')
+		dest_len++;
+	while (i < nb && src[i] != '\0')
 	{
-		*div = a / b;
-		*mod = a % b;
+		dest[dest_len] = src[i];
+		dest_len++;
+		i++;
 	}
+	dest[dest_len] = '\0';
+	return (dest);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/10 09:47:29 by ysumeral          #+#    #+#             */
+/*   Updated: 2024/07/20 11:01:25 by ysumeral         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putchar(char c)
@@ -5,37 +17,31 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_hex(unsigned char c)
+int	ft_char_is_printable(char c)
 {
-	int 	first;
-	int	second;
-	char	*base;
+	int	i;
 
-	base = "0123456789abcdef";
-	first = c / 16;
-	second = c % 16;
-
-	if(first != 0)
-	{
-		ft_putchar(base[first]);
-		ft_putchar(base[second]);
-	}
-	else
-		ft_putchar('0');
+	i = 0;
+	if (c < 32 || c == 127)
+		return (0);
+	return (1);
 }
 
 void	ft_putstr_non_printable(char *str)
 {
 	int	i;
-	char	c;
 
-	while(str[i] != '\0')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if(str[i] <= 32 ||  str[i] == 127)
+		if (ft_char_is_printable(str[i]) == 0)
 		{
 			ft_putchar('\\');
-			ft_print_hex(str[i]);		
+			ft_putchar("0123456789abcdef"[str[i] / 16]);
+			ft_putchar("0123456789abcdef"[str[i] % 16]);
 		}
+		else
+			ft_putchar(str[i]);
 		i++;
 	}
 }

@@ -6,11 +6,11 @@
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 21:29:32 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/10 09:04:27 by ysumeral         ###   ########.fr       */
+/*   Updated: 2024/07/18 07:36:26 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *********nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }
