@@ -19,11 +19,3 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
-
-#include <stdio.h>
-int main()
-{
-	char s1[] = "test";
-	char s2[] = "tset";
-	printf("%d", ft_strcmp(s1, s2));
-}
