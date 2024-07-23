@@ -46,11 +46,3 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	dest[second_i] = '\0';
 	return (dest_len + src_len);
 }
-
-#include <stdio.h>
-int main()
-{
-	char s1[20] = "yunus emre";
-	char s2[] = "adana";
-	printf("%d - %s", ft_strlcat(s1, s2, 20), s1);
-}
