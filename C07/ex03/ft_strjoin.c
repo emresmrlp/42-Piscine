@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysumeral <ysumeral@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/23 12:28:54 by ysumeral          #+#    #+#             */
-/*   Updated: 2024/07/23 15:07:50 by ysumeral         ###   ########.fr       */
+/*   Created: 2024/07/23 16:13:18 by ysumeral          #+#    #+#             */
+/*   Updated: 2024/07/25 19:37:58 by ysumeral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	*ft_range(int min, int max)
+char	*ft_strjoin(int size, char **strs, char *sep)
 {
-	int	i;
-	int	*buffer;
-	int	size;
+	int		i;
+	int		j;
+	int		ch;
+	char	*buffer;
 
 	i = 0;
-	size = max - min;
-	if (min >= max)
-		return (NULL);
-	buffer = (int *)malloc(sizeof(int) * size);
+	j = 0;
+	ch = 0;
+	buffer = malloc(sizeof(strs));
 	if (buffer == NULL)
 		return (NULL);
 	while (i < size)
-		buffer[i++] = min++;
+	{
+		j = 0;
+		while (strs[i][j] != '\0')
+			buffer[ch++] = strs[i][j++];
+		j = 0;
+		while (sep[j] != '\0' && i != size - 1)
+			buffer[ch++] = sep[j++];
+		i++;
+	}
+	buffer[ch] = '\0';
 	return (buffer);
+}
+
+#include <stdio.h>
+int main()
+{
+	char *c[] = {"serhat", "yunus", "topu", "tut"};
+	printf("%s", ft_strjoin(4, c, "?=)!"));
 }
