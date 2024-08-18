@@ -38,10 +38,3 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	buffer[ch] = '\0';
 	return (buffer);
 }
-
-#include <stdio.h>
-int main()
-{
-	char *c[] = {"serhat", "yunus", "topu", "tut"};
-	printf("%s", ft_strjoin(4, c, "?=)!"));
-}
