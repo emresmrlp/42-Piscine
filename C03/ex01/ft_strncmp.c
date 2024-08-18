@@ -21,11 +21,3 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		return (0);
 	return (s1[i] - s2[i]);
 }
-
-#include <stdio.h>
-int main()
-{
-	char s1[] = "test";
-	char s2[] = "tset";
-	printf("%d", ft_strncmp(s1, s2, 2));
-}
