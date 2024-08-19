@@ -1,3 +1,3 @@
-# 42 Istanbul / Temmuz 2024 Havuzu Projelerim
+# 42 Istanbul / July 2024 Piscine
 
-1 - 26 Temmuz 2024 tarihlerinde 26 günlük havuz eğitimi sırasında C ve Shell Script ile yazdığım projelerim.
+You can see the projects I completed during my 26-day piscine training here.
